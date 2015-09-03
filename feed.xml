@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chrisharry</title>
+    <description>My experiences with Makers Academy</description>
+    <link>http://chweeks.github.io/</link>
+    <atom:link href="http://chweeks.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 04 Sep 2015 00:08:27 +0100</pubDate>
+    <lastBuildDate>Fri, 04 Sep 2015 00:08:27 +0100</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Day 2</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Standup&lt;/h3&gt;
+
+&lt;p&gt;The second day started with the cohort separating into bytes (small groups) in order to have their standups. This ideally is a short meeting in the morning to discuss what you had done the day before and what you plan to do today. We would also share what we had struggled with in order to get our coaches input. Obviously we hadn&#39;t written any code yet and so it was simply to get used to the idea of a standup and for our coach (Sam A.K.A Tansaku) to tell us our projects for the week.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/standup.jpg&quot; alt=&quot;standup&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 class=&quot;section-heading&quot;&gt;Boris Bikes&lt;/h3&gt;
+
+&lt;p&gt;The project for our first week is to create a system that&#39;ll simulate the use of Boris Bikes. The basics of what we achieved today was creating a DockingStation class that has a capacity, could have a bike docked into it and also release a bike to a customer. We also created Bike class which creates a bike that can be working or not. We also implemented various other features but nothing too taxing. The code itself was the easiest part of the first day it&#39;s the test driven development that drove me a bit crazy.&lt;/p&gt;
+
+&lt;h3 class=&quot;section-heading&quot;&gt;Test Driven Development&lt;/h3&gt;
+
+&lt;p&gt;TDD is a software development process which repeats a small cycle of development.
+&lt;ol&gt;
+&lt;li&gt;Write an initially failing test for a new feature or function you wish to implement&lt;/li&gt;
+&lt;li&gt;Write the bare minimum amount of code that will pass the test&lt;/li&gt;
+&lt;li&gt;Refactor the code to a decent standard&lt;/li&gt;
+&lt;li&gt;Repeat the process&lt;/li&gt;
+&lt;/ol&gt;
+
+This is also known as the Red-Green-Refactor cycle, red referring to the failed test, green the passed test and refactor.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/rgrefactor.jpg&quot; alt=&quot;rgrefactor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This allows you to change little bits at a time and so always have a working code base that you can jump back to or go live if needed. This style also makes it a lot easier for the next developer working on the code to understand what it does and how it works.&lt;/p&gt;
+
+&lt;p&gt;Writing the tests first was a difficult concept to come to terms with as all you wanted to do was just get your head down and start creating features. It was also made more difficult as the tests are written using Rspec which, although is pure Ruby, has a whole new set of syntax to learn. The pair programming aspect of it was also a bit strange to begin with but I had a great partner in Phil and by the end of the day I was pretty confident with the syntax and the TDD side of it was coming easier and making more sense.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Wed, 02 Sep 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/09/02/day2/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/09/02/day2/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>First Day</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;The Name Game&lt;/h3&gt;
+
+&lt;p&gt;The first day at Maker&#39;s was absolutely not what I expected and at the same time was the perfect start. First thing to mention is that absolutely no code was written on the first day. The day was all about getting to know the others in your cohort and an explanation of the structure of each day/week.&lt;/p&gt;
+
+&lt;p&gt;There was no time for being shy as we were instantly told to pair up with someone. In 5 minutes we would then, as a pair, introduce each other to the rest of the group. I paired up with Yana, who used to be a tax Lawyer back in Russia but has come here so she can do something she actually enjoys instead. We then played the name game where, standing in a circle, we have to name everyone in the circle and where they&#39;re from. This surprisingly worked and I can now name all the 30 odd people in my cohort.&lt;/p&gt;
+
+&lt;p&gt;We were then split into small groups and were given 15 minutes to build a spaghetti tower. The aim was to build the tower as high as we could with the materials we were given and place a marshmallow at the top of the tower. It&#39;s safe to say my group did not win this challenge despite having an engineer in the group. I&#39;m glad I didn&#39;t take a picture of it as it was possibly the ugliest thing ever constructed. Nonetheless it was fun building this monstrosity and we all had a good laugh.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/spaghetti-challenge.jpg&quot; alt=&quot;spaghetti-challenge&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We were then given a small talk on the significance of this challenge and which teams do better and why. Rather than try explain it myself, &lt;a href=&quot;https://www.youtube.com/watch?v=H0_yKBitO8M&quot;&gt;here is a TED talk &lt;/a&gt; that does it a lot better.&lt;/p&gt;
+
+&lt;p&gt;A lot more stuff was said and done but their was so much of it that the only other thing I remember after this was the pub. I only stayed for a drink or two (on Makers) but still only managed to get home at 10pm. The northern line was down and so ended up walking and getting two buses home. Yay public transport. &lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Tue, 01 Sep 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/09/01/First%20Day/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/09/01/First%20Day/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pre-Course Week 4</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Ready to go&lt;/h3&gt;
+&lt;p&gt;This week has been a bit of a strange one. After the initial release of work, things have really slowed down and I  finished all the challenges and exercises early in the week. From that point on, it was essentially get as much CodeWars done as you can in order to drive home the ruby syntax and problem solving. A book called &#39;The Pragmatic Rubyist&#39; was also recommended for us to work through.&lt;/p&gt;
+
+&lt;p&gt;After working through Chris Pine&#39;s book and other various texts, I was a bit sick of reading things and so just carried on working through some CodeWars problems and just generally played around with the language as well as trying to revise some Javascript I had done previously.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/im-ready.jpg&quot; alt=&quot;imready&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; I then spent the weekend doing absolutely nothing coding related and just relaxed in anticipation of the non-stop three months to come.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Sun, 30 Aug 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/08/30/precourse-week4/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/08/30/precourse-week4/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pre-Course Week 3</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Pair Programming&lt;/h3&gt;
+&lt;p&gt;As part of our preparation for the course ahead, we were encouraged to organise a pair programming session with our mentors this week. As we were also invited to attend the senior class&#39; graduation on Friday I planned to meet my mentor (Lewis) Friday afternoon. The pair programming session was great, Lewis was encouraging and we decided to try and refactor a Chris Pine exercise I had completed earlier. Working with a partner while coding is a rather strange feeling. Normally I would just think things through in my head, start typing and just chop and change the code as I went along. In a pair you have to work a bit differently, you have to try and verbalise your thought process in order for your partner to understand your thinking and what your doing.&lt;/p&gt;
+
+&lt;p&gt;Lewis also spoke to me about the concept of &#39;smelly&#39; code, where the code may work but doesn&#39;t look quite right. This essentially comes down to making your code as readable as you can. This makes it easy for someone to jump in and understand what your program does and doesn&#39;t do and edit it if necessary. Once we&#39;d worked through the code and made it use recursion rather than a while loop, we just chatted about the course and how things work for the first couple of weeks when you get there.&lt;/p&gt;
+
+&lt;p&gt;All in all it was some nice preparation for the daily pair programming I&#39;ll be doing on the course. Lewis told me I&#39;ll generally have a new partner to work with everyday and as a pair you&#39;ll revert to working on the code of the person who hasn&#39;t got as far. This makes sure everyone&#39;s on a level playing field and allows the person ahead to reinforce their learning through explaining how its done.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/pair-programming.jpg&quot; alt=&quot;pair-programming&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;section-heading&quot;&gt;Senior Graduation&lt;/h3&gt;
+&lt;p&gt; The senior classes graduation was a fun event and it was great to see how much they&#39;d achieved while on the course. The graduation started with a speech from Ruben (one of the founders of Makers), in which he spoke of the journey Makers Academy had gone through and how it had overcome the doubt people had in its ability to teach people to be developers in 12 weeks. This has now culminated (in his words) with various groups knocking on their doors and asking them to replicate their success overseas. He then spoke about a scholarship fund they had been working on in order to provide a student who had fallen out of main stream education, with next to no qualifications, with a place on their course. He was proud to announce that this person was here tonight and he was actually one of the graduates.&lt;/p&gt;
+
+&lt;p&gt; After Rubens speech, Sam was introduced, a man dressed in full Samurai/Centurion gear (code warrior). Either way Sam is the head of education and was their to introduce the graduating teams who were to give a presentation on their final projects. The final projects were very impressive and all very different. There was a memory training / tamagochi style mobile app,  a music streaming website, a kids mobile game to help make sight seeing fun and even an &#39;Airbnb but for camping&#39; app. All the projects were really well presented and the teams enthusiasm was clear to see. After the presentations there were representatives of some of the hiring partners there to talk to the teams about their projects in some more depth and there was plenty of beer being passed around.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/grad2.jpg&quot; alt=&quot;grad2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All of this has made me want to really get this course going and makes me excited for what I&#39;ll be able to build once the course is over. Congrats to the graduates and good luck.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 23 Aug 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/08/23/precourse-week3/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/08/23/precourse-week3/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pre-Course Week 2</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Round Up&lt;/h3&gt;
+
+&lt;p&gt;Second week into the Pre-Course and things are running smoothly. After the pains I went through setting up all the software (on windows) last week, this week has been a breeze. Having completed the Git / Github work for week 2 already, I moved on to finishing off Chris Pine&#39;s Learn to Program. I&#39;ve completed up till chapter 12 and so only two more to go! With the exception of chapter 10, on recursion, things haven&#39;t been too confusing. Recursion was a rather strange concept to wrap my head around at first, but after completing the exercises and playing around you just learn by seeing what does and doesn&#39;t work.&lt;/p&gt;
+
+&lt;p&gt;Recursion is a technique where you create a method that calls itself. I&#39;ll try explain through an example I definitely didn&#39;t steal off &lt;a href=&quot;&quot; src=&quot;http://stackoverflow.com/questions/717725/understanding-recursion&quot;&gt;stackoverflow:&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;How do you empty a vase containing N flowers?&lt;/p&gt;
+
+&lt;p&gt;Answer: if the vase is not empty, you take out one flower and then you empty a vase containing N-1 flowers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/recursioncode.jpg&quot; alt=&quot;code&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This code checks first if the number of flowers in a vase is greater than 0. If that is false then the program will simply return &#39;The vase is empty&#39; But if it is true it&#39;ll call the method &#39;empty&#39; on the (numberFlowersInVase - 1). This will keep going and going until the vase is empty.&lt;/p&gt;
+
+&lt;p&gt;I know your asking the same thing I did, &quot;Why can&#39;t you just use a loop?&quot; and to be honest you could, but this is a lot more &#39;elegant&#39;. Now I don&#39;t know about elegant but it is a lot tidier... and cooler.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/recursion.jpg&quot; alt=&quot;comic3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;On Friday, week 2&#39;s challenge was released, the Octocat challenge. This involved the basic uses of &lt;a href=&quot;&quot; src=&quot;https://github.com/chweeks/git-commands&quot;&gt;Git and Github commands&lt;/a&gt; and involved the creation of a repository containing files which themselves contained questions. The task was to then create a separate branch of this repository which would be made up of the same files, but instead of the files containing questions they would contain the answers. Essentially creating two versions of the files, one with questions, one with answers. We also had to fork a provided repository, add our adaptations to it and then create a pull request. This is just editing a file on someone else&#39;s repository and then submitting your changes for them to review. All very easy but absolutely essential things to know and understand.&lt;/p&gt;
+
+&lt;p&gt;Only 2 weeks to go now until the real work begins and I can&#39;t wait.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Sun, 16 Aug 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/08/16/precourse-week2/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/08/16/precourse-week2/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pre-Course Week 1</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Round Up&lt;/h3&gt;
+
+&lt;p&gt;After the pre-course launch on Monday all the learning material for the four weeks of the pre-course was made available.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Week 1 : Command Line&lt;/li&gt;
+&lt;li&gt;Week 2 : Version Control using Git and Github&lt;/li&gt;
+&lt;li&gt;Weeks 3 &amp;amp; 4 : Ruby&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Although all the study material is available, the challenges associated with each week are released on the Friday of that week and are due to be completed Monday morning of the following week. Luckily I managed to grab the first weeks challenge off of the Makers academy github page and so finished it quite early. I had done a fair bit of command line work before the course so I knew the general commands and took to it fairly quickly. The material shows and explains the main commands used and gets you to learn them through repetition and repetition until it just starts to flow naturally. The challenge itself is very simple as long as you have worked through the material and learnt the &lt;a href=&quot;https://github.com/chweeks/command-line&quot;&gt;Essential Commands&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since I had completed the first weeks work by Wednesday afternoon I moved on to week 2. This teaches you the fundamentals of version control using &#39;Git Commands&#39; and how to push (upload) and pull (download) code to and from your local folders to a corresponding repository on github.&lt;/p&gt;
+
+&lt;p&gt;The essence of version control is a system that recorded changes to a file or a project over time. These changes can come from one source if its a private project or could be coming from a team of people working on a web app. It essentially allows you to revert back to older versions of your code if someone (probably you) cocks up. The idea is to add small changes/features, early and often, to a project and document them in order to create a timeline of differing working versions of the code.&lt;/p&gt;
+
+&lt;p&gt;This again was rather simple but extremely important and can be a bit frustrating when trying to execute commands that aren&#39;t working, then realising you&#39;re an idiot and were in the wrong directory. Maybe that&#39;s just me but either way, repetition is key and it&#39;ll come naturally in the end. Annoyingly week 2&#39;s challenge won&#39;t be out until next Friday and so I will be pushing on to weeks 3 &amp;amp; 4 and try to get as much of a headstart with learning the Ruby language as I can.&lt;/p&gt;
+
+&lt;p&gt; All in all this first week has been fun and not too challenging, the worst thing by far is getting all the software set up on my PC. Yes I know Windows eurgh, but even on a MacBook it is still a bit of a nightmare getting all the different pieces you need and I don&#39;t even know what half of it does yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/post-in-04.jpg&quot; alt=&quot;comic2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Don&#39;t even get me started on what a pain this blog was to setup...&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Aug 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/08/09/precourse-week1/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/08/09/precourse-week1/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pre-course Launch</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;The Launch&lt;/h3&gt;
+
+&lt;p&gt;&lt;q&gt;No stupid questions&lt;/q&gt;-Nikesh Ashar&lt;/p&gt;
+
+&lt;p&gt;After my interview things started to move very quickly, I had managed to squeeze into the last few places left on the September course. This meant my pre-course would be starting soon, the following week in fact. This felt very quick because when I booked onto the September course I thought that was the pre-course start date, my bad. Essentially it meant I was starting a month sooner than I thought, which was exciting.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/im-ready.jpg&quot; alt=&quot;spongebob&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After a series of confused (on my end) email exchanges with Nikesh, who runs the precourse, I&#39;d sussed the aforementioned issue and was told we would be having a pre-course launch the day before the course at Makers studio. The launch was a chance to meet the team at Makers and the students all gave a quick introuction of themselves to the rest of the group. There was also a couple of people in a google hangout as they couldn&#39;t make it on the day. This was a bit problematic and ended in a half hour recording of one girls&#39; face and a lot of broken talking and shouting at a lagging screen. Despite this hilarious hiccup it was a good night and the main emphasis was on how we would attack each weeks work. The gist of it was to try it alone and if you have a problem research it and try again, then ask your peers on the course and open up an issue on github. I&#39;m guessing this is to ensure we try and fail (a lot!) in order to learn rather than spamming any of the seniors or Nikesh with any little problems we encounter.&lt;/p&gt;
+
+&lt;p&gt; Unfortunately I had to travel out of London again that night so I couldn&#39;t stay and get to know the people on my course a little bit better but everyone seemed really nice and I&#39;m sure there&#39;ll be plenty of opportunity for that in the future. At the moment I&#39;m just ready to get on with the work and learn as much as I can before I start full-time.&lt;/p&gt;
+
+&lt;p&gt;P.S He meant &#39;no such thing as stupid questions&#39;&lt;/p&gt;
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Sun, 02 Aug 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/08/02/precourse_launch/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/08/02/precourse_launch/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Application</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Online Application&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://apply.makersacademy.com/&quot;&gt;application process&lt;/a&gt; for Makers is said to be rather selective, quoted on their site to be &lt;a href=&quot;http://www.makersacademy.com/about-us/&quot;&gt;1 in 10&lt;/a&gt;. This ensures they get the people they believe will make it through the course and can put forward to their hiring partners. This is extremely important for them as Makers gets a placement fee when one of their graduates is hired by a partner company and this is where they make a profit.&lt;/p&gt;
+
+&lt;p&gt;Having said that, the application itself is not very strenuous, it simply involves two questions to gauge your motivation:  &lt;/p&gt;
+
+&lt;ul&gt; &lt;li&gt;Why do you want to attend Makers Academy?&lt;/li&gt;  
+&lt;li&gt;How have you learnt to code so far?&lt;/li&gt;  
+&lt;/ul&gt;
+
+&lt;p&gt;I got a reply five days after submitting my application with instructions to book an interview. I booked it for two weeks after that and was given material to go over before the interview.  &lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.codecademy.com/learn&quot;&gt;Codecademy&lt;/a&gt; Ruby course&lt;/li&gt;  
+&lt;li&gt;First 8 chapters of Chris Pines &#39;&lt;a href=&quot;https://drive.google.com/file/d/0Bz17qR4zZedib0M5RnRwWFl3MUk/view&quot;&gt;Learn To Program&#39;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Luckily I had already gone through these before I applied but still repeated it a couple of times to make sure I didn&#39;t look like an idiot. I was told the interview would be split into three parts:  &lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;Introduction to Makers&lt;/li&gt;  
+&lt;li&gt;A few logic games&lt;/li&gt;  
+&lt;li&gt;Short pair-programming session&lt;/li&gt;&lt;/ol&gt;
+
+&lt;h3 class=&quot;section-heading&quot;&gt;The Interview&lt;/h3&gt;
+
+&lt;p&gt;My interview experience was great, when I arrived (after getting a little lost) everyone was nice and welcoming and it was all really relaxed. I then met Nikesh who was interviewing me and he told me all about Makers, what they do, what they expect of a student and what the student can expect from them. Essentially if you work extremely hard, learn the content, complete all the challenges on time/to a good standard and you can work well with everyone, then they can confidently present you to their hiring partners. &lt;/p&gt;
+
+&lt;p&gt;I didn&#39;t really have a logic games section in my interview. After the introduction it was mainly answering questions like, why I wanted to join the course and what I had done prior to the course in terms of coding. &lt;/p&gt;
+
+&lt;p&gt;Next was on to the the pair programming, which involved going through a few exercises on &lt;a href=&quot;http://www.codewars.com&quot;&gt; Codewars &lt;/a&gt;. These exercises should be easy if you&#39;ve done the preparation they suggested. It was more just showing that you can take advice on board and that you can break down a problem. This was where I was shown the important difference between good code and code that simply works.&lt;/p&gt;
+
+&lt;p&gt;The whole process was very relaxed and after the pair programming we just chatted for a while about the course and Nikesh answered any questions I had. I heard back about 5 days later that all went well and I could book my place on the course! &lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Jul 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/07/26/application/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/07/26/application/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Everyone loves an origin story</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Square One&lt;/h3&gt;
+&lt;p&gt;Fresh out of graduating from University with a physics degree I set out in doing what I had always told myself I wanted to do and become an airline pilot. After months of selection days and aptitude testing I had been given the option of joining two different flight schools but had also realised that it just wasn&#39;t what I wanted to do. &lt;/p&gt;
+
+&lt;p&gt;While studying physics the topic that intrigued and excited me the most was our modules on the basics of java programming.&lt;p /&gt;
+&lt;img src=&quot;/img/post-in-01.jpg&quot; alt=&quot;comic1&quot; /&gt;
+&lt;p&gt; This quickly gripped me and so I proceeded to learn various forms of coding using books and interactive websites to learn HTML, CSS, Javascript, jQuery and Ruby. Naturally after the pilot dream faded I really wanted to make this hobby of mine into something more and to make it into a career. Although I knew basic coding and could build rudimentary programs and websites I quickly realised if I wanted to make it into a profession I would need proper training in not just writing code but becoming a developer. &lt;/p&gt;
+
+&lt;h3 class=&quot;section-heading&quot;&gt;Why Makers&lt;/h3&gt;
+&lt;img src=&quot;/img/post-in-01-2.jpg&quot; alt=&quot;Makers logo&quot; /&gt;
+&lt;p&gt;While researching extensively into training programs and postgraduate degree options. I quickly came to the conclusion that although a masters in computer science would give me an extra qualification and some great theory knowledge, it wouldn&#39;t give me the skills necessary to acquire a junior developer position. &lt;/p&gt;
+
+&lt;p&gt;This is when I first became aware of &lt;a href=&quot;http://www.makersacademy.com&quot;&gt;Makers Academy&lt;/a&gt;. This course said you could become a developer in 12 weeks, this sounded perfect, amazing and  too good to be true. This is when I first discovered the many blogs of the people that attended Makers and also the testimony of their hiring &lt;a href=&quot;http://www.makersacademy.com/partners&quot;&gt; partners&lt;/a&gt;. All of which couldn&#39;t praise the course and its people enough and also talked about how intensive and tough the course was. These blogs also showed that people were obviously getting great training and landing jobs in these great companies (and having a great time in the process). From then on I was convinced and decided to &lt;a href=&quot;http://www.makersacademy.com/apply&quot;&gt;apply&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+&lt;/p&gt;
+</description>
+        <pubDate>Fri, 17 Jul 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/07/17/origin/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/07/17/origin/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
