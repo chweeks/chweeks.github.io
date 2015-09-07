@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="My experiences with Makers Academy">
 
-    <title>Day 4 - chrisharry</title>
+    <title>Airport Challenge - chrisharry</title>
 
-    <link rel="canonical" href="http://chweeks.github.io/2015/09/04/day4/">
+    <link rel="canonical" href="http://chweeks.github.io/2015/09/06/weekend-challenge-1/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -76,16 +76,16 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/boris.jpg')">
+<header class="intro-header" style="background-image: url('/img/plane.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Day 4</h1>
+                    <h1>Airport Challenge</h1>
                     
-                    <h2 class="subheading">Bye Bye Boris</h2>
+                    <h2 class="subheading">Weekend 1</h2>
                     
-                    <span class="meta">Posted by chrisharry on September 4, 2015</span>
+                    <span class="meta">Posted by chrisharry on September 6, 2015</span>
                 </div>
             </div>
         </div>
@@ -98,27 +98,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<h3 class="section-heading">Doubles</h3>
+				<h3 class="section-heading">The Task</h3>
 
-<p>Today was the last day to work on our Boris bike projects. The morning standup went for quite a while as we went over using doubles and verified doubles in our tests.</p>
+<p>Every week we have a weekend challenge meant to test and solidify what we have learnt throughout the week. We were told to ensure that by Monday morning at 9AM we had submitted a pull request with our challenge with even the smallest amount of code if necessary, just something. We were also told about not worrying about completely finishing the Boris-Bikes project before starting the challenge. So naturally I went about completing the Boris-Bikes challenge all Saturday and didn't even look at the challenge till Sunday.</p>
+<p>Our challenge for the weekend was to create a basic simulation of an airport through a set of given user stories. The task had very similar elements to the Boris-Bikes projects. We had two Objects a plane and an airport. A plane needed to have a status, either flying or landed. The airport needed to be able to instruct the plane to land and to instruct it to take off. The planes couldn't land if the airport was full and couldn't land or take off when the weather was stormy.</p>
+<p>The code itself was very simple but as usual it was the tests that made it tricky. Having a random method for the chance of stormy weather made the tests more difficult as we had to learn about stubbing. Essentially when testing to make sure the planes couldn't land or take off in stormy weather I had to 'stub' the random_weather method to ensure that the weather was always stormy for those tests. </p>
+<p>Once submitted the code gets 'marked' and I use marked very loosely as when its submitted some automated tests are run on the code. The main test is that all your written tests pass and also that your tests cover everything within the system. I got a hundred percent coverage which I was really happy with but then there was hound. From what I understand this hound program goes through your code and tests its readability. It throws up errors for lines and methods that are too long or if indentation is wrong. I had one of these errors that I just couldn't seem to shake for the longest time but managed to succeed in the end.</p>
 
-<p>While writing Rspec tests initially for the Boris-Bikes projects, I may have written a test like this in the DockingStation spec file:</p>
-<p><code>bike = Bike.new</code></p>
+<p> My first week at Makers has been an amazing experience, I've had a lot of fun and have learnt more than I thought possible. Their have been some great moments where you seem to understand everything and feel like a god, but their have been even more moments where you come crashing face first back down to earth and realise you have but scratched the surface.</p>
 
-<p><code>subject.dock(bike)</code></p>
+<p><a href="https://xkcd.com/979/"><img src="/img/program-comic.jpg" alt="https://xkcd.com/979/" /></a></p>
 
-<p><code>expect(subject.bikes.include?(bike)).to eql true</code></p>
-<p>
-This is to test whether the DockingStation method 'dock' adds the bike to the array bikes within the docking station. This test is not very good as it includes creating an instance of the Bike class and so the test is not isolated. Therefore any changes we make to the Bike class could have a negative effect on all our tests pertaining to the DockingStation class. This is where a double can be very handy. By using a double we create a kind of 'stand in' for the bike object without having to create a new Bike object.
-</p>
-<p><code>bike = :bike</code></p>
-
-<p><code>subject.dock(bike)</code></p>
-
-<p><code>expect(subject.bikes.include?(bike)).to eql true</code></p>
-<p> This way we can test the DockingStation in isolation and any future changes we make to the bike class will not alter the outcome of our tests. Armed with this new knowledge Gavin and I still didn't use them till the end. Our thought process was to get the whole system working first and then refactor it to use doubles and clean it up a bit. By the end of the day we had finished all the features of the system and left the refactoring to do in our spare time.</p>
-
-<p>Although, saying that, I don't know how much spare time we'll be getting as we had our first weekend challenge go live this afternoon. But I'm going to take the evening off and try not to even look at the challenge till tomorrow. Then its back on the grind.</p>
+<p>1 week down, 11 to go.</p>
 
 <p>Chris</p>
 
@@ -128,13 +119,9 @@ This is to test whether the DockingStation method 'dock' adds the bike to the ar
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2015/09/03/day3/" data-toggle="tooltip" data-placement="top" title="Day 3">&larr; Previous Post</a>
+                        <a href="/2015/09/04/day4/" data-toggle="tooltip" data-placement="top" title="Day 4">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2015/09/06/weekend-challenge-1/" data-toggle="tooltip" data-placement="top" title="Airport Challenge">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 

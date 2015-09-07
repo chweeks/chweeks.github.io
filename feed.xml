@@ -5,9 +5,33 @@
     <description>My experiences with Makers Academy</description>
     <link>http://chweeks.github.io/</link>
     <atom:link href="http://chweeks.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 07 Sep 2015 23:27:54 +0100</pubDate>
-    <lastBuildDate>Mon, 07 Sep 2015 23:27:54 +0100</lastBuildDate>
+    <pubDate>Tue, 08 Sep 2015 00:11:22 +0100</pubDate>
+    <lastBuildDate>Tue, 08 Sep 2015 00:11:22 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Airport Challenge</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;The Task&lt;/h3&gt;
+
+&lt;p&gt;Every week we have a weekend challenge meant to test and solidify what we have learnt throughout the week. We were told to ensure that by Monday morning at 9AM we had submitted a pull request with our challenge with even the smallest amount of code if necessary, just something. We were also told about not worrying about completely finishing the Boris-Bikes project before starting the challenge. So naturally I went about completing the Boris-Bikes challenge all Saturday and didn&#39;t even look at the challenge till Sunday.&lt;/p&gt;
+&lt;p&gt;Our challenge for the weekend was to create a basic simulation of an airport through a set of given user stories. The task had very similar elements to the Boris-Bikes projects. We had two Objects a plane and an airport. A plane needed to have a status, either flying or landed. The airport needed to be able to instruct the plane to land and to instruct it to take off. The planes couldn&#39;t land if the airport was full and couldn&#39;t land or take off when the weather was stormy.&lt;/p&gt;
+&lt;p&gt;The code itself was very simple but as usual it was the tests that made it tricky. Having a random method for the chance of stormy weather made the tests more difficult as we had to learn about stubbing. Essentially when testing to make sure the planes couldn&#39;t land or take off in stormy weather I had to &#39;stub&#39; the random_weather method to ensure that the weather was always stormy for those tests. &lt;/p&gt;
+&lt;p&gt;Once submitted the code gets &#39;marked&#39; and I use marked very loosely as when its submitted some automated tests are run on the code. The main test is that all your written tests pass and also that your tests cover everything within the system. I got a hundred percent coverage which I was really happy with but then there was hound. From what I understand this hound program goes through your code and tests its readability. It throws up errors for lines and methods that are too long or if indentation is wrong. I had one of these errors that I just couldn&#39;t seem to shake for the longest time but managed to succeed in the end.&lt;/p&gt;
+
+&lt;p&gt; My first week at Makers has been an amazing experience, I&#39;ve had a lot of fun and have learnt more than I thought possible. Their have been some great moments where you seem to understand everything and feel like a god, but their have been even more moments where you come crashing face first back down to earth and realise you have but scratched the surface.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xkcd.com/979/&quot;&gt;&lt;img src=&quot;/img/program-comic.jpg&quot; alt=&quot;https://xkcd.com/979/&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1 week down, 11 to go.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Sun, 06 Sep 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/09/06/weekend-challenge-1/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/09/06/weekend-challenge-1/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Day 4</title>
@@ -264,48 +288,6 @@ This is also known as the Red-Green-Refactor cycle, red referring to the failed 
         <pubDate>Sun, 02 Aug 2015 13:00:00 +0100</pubDate>
         <link>http://chweeks.github.io/2015/08/02/precourse_launch/</link>
         <guid isPermaLink="true">http://chweeks.github.io/2015/08/02/precourse_launch/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Application</title>
-        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Online Application&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://apply.makersacademy.com/&quot;&gt;application process&lt;/a&gt; for Makers is said to be rather selective, quoted on their site to be &lt;a href=&quot;http://www.makersacademy.com/about-us/&quot;&gt;1 in 10&lt;/a&gt;. This ensures they get the people they believe will make it through the course and can put forward to their hiring partners. This is extremely important for them as Makers gets a placement fee when one of their graduates is hired by a partner company and this is where they make a profit.&lt;/p&gt;
-
-&lt;p&gt;Having said that, the application itself is not very strenuous, it simply involves two questions to gauge your motivation:  &lt;/p&gt;
-
-&lt;ul&gt; &lt;li&gt;Why do you want to attend Makers Academy?&lt;/li&gt;  
-&lt;li&gt;How have you learnt to code so far?&lt;/li&gt;  
-&lt;/ul&gt;
-
-&lt;p&gt;I got a reply five days after submitting my application with instructions to book an interview. I booked it for two weeks after that and was given material to go over before the interview.  &lt;/p&gt;
-
-&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.codecademy.com/learn&quot;&gt;Codecademy&lt;/a&gt; Ruby course&lt;/li&gt;  
-&lt;li&gt;First 8 chapters of Chris Pines &#39;&lt;a href=&quot;https://drive.google.com/file/d/0Bz17qR4zZedib0M5RnRwWFl3MUk/view&quot;&gt;Learn To Program&#39;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-
-&lt;p&gt;Luckily I had already gone through these before I applied but still repeated it a couple of times to make sure I didn&#39;t look like an idiot. I was told the interview would be split into three parts:  &lt;/p&gt;
-
-&lt;ol&gt;&lt;li&gt;Introduction to Makers&lt;/li&gt;  
-&lt;li&gt;A few logic games&lt;/li&gt;  
-&lt;li&gt;Short pair-programming session&lt;/li&gt;&lt;/ol&gt;
-
-&lt;h3 class=&quot;section-heading&quot;&gt;The Interview&lt;/h3&gt;
-
-&lt;p&gt;My interview experience was great, when I arrived (after getting a little lost) everyone was nice and welcoming and it was all really relaxed. I then met Nikesh who was interviewing me and he told me all about Makers, what they do, what they expect of a student and what the student can expect from them. Essentially if you work extremely hard, learn the content, complete all the challenges on time/to a good standard and you can work well with everyone, then they can confidently present you to their hiring partners. &lt;/p&gt;
-
-&lt;p&gt;I didn&#39;t really have a logic games section in my interview. After the introduction it was mainly answering questions like, why I wanted to join the course and what I had done prior to the course in terms of coding. &lt;/p&gt;
-
-&lt;p&gt;Next was on to the the pair programming, which involved going through a few exercises on &lt;a href=&quot;http://www.codewars.com&quot;&gt; Codewars &lt;/a&gt;. These exercises should be easy if you&#39;ve done the preparation they suggested. It was more just showing that you can take advice on board and that you can break down a problem. This was where I was shown the important difference between good code and code that simply works.&lt;/p&gt;
-
-&lt;p&gt;The whole process was very relaxed and after the pair programming we just chatted for a while about the course and Nikesh answered any questions I had. I heard back about 5 days later that all went well and I could book my place on the course! &lt;/p&gt;
-
-&lt;p&gt;Chris&lt;/p&gt;
-</description>
-        <pubDate>Sun, 26 Jul 2015 13:00:00 +0100</pubDate>
-        <link>http://chweeks.github.io/2015/07/26/application/</link>
-        <guid isPermaLink="true">http://chweeks.github.io/2015/07/26/application/</guid>
         
         
       </item>
