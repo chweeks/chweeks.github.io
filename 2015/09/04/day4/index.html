@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="My experiences with Makers Academy">
 
-    <title>chrisharry</title>
+    <title>Day 4 - chrisharry</title>
 
-    <link rel="canonical" href="http://chweeks.github.io/">
+    <link rel="canonical" href="http://chweeks.github.io/2015/09/04/day4/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,112 +75,69 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/boris.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>chrisharry</h1>
-                    <hr class="small">
-                    <span class="subheading">My experiences with Makers Academy</span>
+                <div class="post-heading">
+                    <h1>Day 4</h1>
+                    
+                    <h2 class="subheading">Bye Bye Boris</h2>
+                    
+                    <span class="meta">Posted by chrisharry on September 4, 2015</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<div class="post-preview">
-    <a href="/2015/09/04/day4/">
-        <h2 class="post-title">            Day 4
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Bye Bye Boris
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 4, 2015</p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2015/09/03/day3/">
-        <h2 class="post-title">            Day 3
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Refactoring
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 3, 2015</p>
-</div>
-<hr>
+				<h3 class="section-heading">Doubles</h3>
 
-<div class="post-preview">
-    <a href="/2015/09/02/day2/">
-        <h2 class="post-title">            Day 2
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Boris Bikes
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 2, 2015</p>
-</div>
-<hr>
+<p>Today was the last day to work on our Boris bike projects. The morning standup went for quite a while as we went over using doubles and verified doubles in our tests.</p>
 
-<div class="post-preview">
-    <a href="/2015/09/01/First%20Day/">
-        <h2 class="post-title">            First Day
-        </h2>
-        
-        <h3 class="post-subtitle">
-            An introduction
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 1, 2015</p>
-</div>
-<hr>
+<p>While writing Rspec tests initially for the Boris-Bikes projects, I may have written a test like this in the DockingStation spec file:</p>
+<p><code>bike = Bike.new</code></p>
 
-<div class="post-preview">
-    <a href="/2015/08/30/precourse-week4/">
-        <h2 class="post-title">            Pre-Course Week 4
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Nearly There
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on August 30, 2015</p>
-</div>
-<hr>
+<p><code>subject.dock(bike)</code></p>
+
+<p><code>expect(subject.bikes.include?(bike)).to eql true</code></p>
+<p>
+This is to test whether the DockingStation method 'dock' adds the bike to the array bikes within the docking station. This test is not very good as it includes creating an instance of the Bike class and so the test is not isolated. Therefore any changes we make to the Bike class could have a negative effect on all our tests pertaining to the DockingStation class. This is where a double can be very handy. By using a double we create a kind of 'stand in' for the bike object without having to create a new Bike object.
+</p>
+<p><code>bike = :bike</code></p>
+
+<p><code>subject.dock(bike)</code></p>
+
+<p><code>expect(subject.bikes.include?(bike)).to eql true</code></p>
+<p> This way we can test the DockingStation in isolation and any future changes we make to the bike class will not alter the outcome of our tests. Armed with this new knowledge Gavin and I still didn't use them till the end. Our thought process was to get the whole system working first and then refactor it to use doubles and clean it up a bit. By the end of the day we had finished all the features of the system and left the refactoring to do in our spare time.</p>
+
+<p>Although, saying that, I don't know how much spare time we'll be getting as we had our first weekend challenge go live this afternoon. But I'm going to take the evening off and try not to even look at the challenge till tomorrow. Then its back on the grind.</p>
+
+<p>Chris</p>
 
 
-<!-- Pager -->
+                <hr>
 
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/09/03/day3/" data-toggle="tooltip" data-placement="top" title="Day 3">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
 
-
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 

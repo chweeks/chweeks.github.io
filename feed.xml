@@ -5,9 +5,42 @@
     <description>My experiences with Makers Academy</description>
     <link>http://chweeks.github.io/</link>
     <atom:link href="http://chweeks.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 06 Sep 2015 13:14:56 +0100</pubDate>
-    <lastBuildDate>Sun, 06 Sep 2015 13:14:56 +0100</lastBuildDate>
+    <pubDate>Mon, 07 Sep 2015 23:27:54 +0100</pubDate>
+    <lastBuildDate>Mon, 07 Sep 2015 23:27:54 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Day 4</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Doubles&lt;/h3&gt;
+
+&lt;p&gt;Today was the last day to work on our Boris bike projects. The morning standup went for quite a while as we went over using doubles and verified doubles in our tests.&lt;/p&gt;
+
+&lt;p&gt;While writing Rspec tests initially for the Boris-Bikes projects, I may have written a test like this in the DockingStation spec file:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bike = Bike.new&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;subject.dock(bike)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;expect(subject.bikes.include?(bike)).to eql true&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+This is to test whether the DockingStation method &#39;dock&#39; adds the bike to the array bikes within the docking station. This test is not very good as it includes creating an instance of the Bike class and so the test is not isolated. Therefore any changes we make to the Bike class could have a negative effect on all our tests pertaining to the DockingStation class. This is where a double can be very handy. By using a double we create a kind of &#39;stand in&#39; for the bike object without having to create a new Bike object.
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bike = :bike&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;subject.dock(bike)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;expect(subject.bikes.include?(bike)).to eql true&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt; This way we can test the DockingStation in isolation and any future changes we make to the bike class will not alter the outcome of our tests. Armed with this new knowledge Gavin and I still didn&#39;t use them till the end. Our thought process was to get the whole system working first and then refactor it to use doubles and clean it up a bit. By the end of the day we had finished all the features of the system and left the refactoring to do in our spare time.&lt;/p&gt;
+
+&lt;p&gt;Although, saying that, I don&#39;t know how much spare time we&#39;ll be getting as we had our first weekend challenge go live this afternoon. But I&#39;m going to take the evening off and try not to even look at the challenge till tomorrow. Then its back on the grind.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Fri, 04 Sep 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/09/04/day4/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/09/04/day4/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Day 3</title>
@@ -273,31 +306,6 @@ This is also known as the Red-Green-Refactor cycle, red referring to the failed 
         <pubDate>Sun, 26 Jul 2015 13:00:00 +0100</pubDate>
         <link>http://chweeks.github.io/2015/07/26/application/</link>
         <guid isPermaLink="true">http://chweeks.github.io/2015/07/26/application/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Everyone loves an origin story</title>
-        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Square One&lt;/h3&gt;
-&lt;p&gt;Fresh out of graduating from University with a physics degree I set out in doing what I had always told myself I wanted to do and become an airline pilot. After months of selection days and aptitude testing I had been given the option of joining two different flight schools but had also realised that it just wasn&#39;t what I wanted to do. &lt;/p&gt;
-
-&lt;p&gt;While studying physics the topic that intrigued and excited me the most was our modules on the basics of java programming.&lt;p /&gt;
-&lt;img src=&quot;/img/post-in-01.jpg&quot; alt=&quot;comic1&quot; /&gt;
-&lt;p&gt; This quickly gripped me and so I proceeded to learn various forms of coding using books and interactive websites to learn HTML, CSS, Javascript, jQuery and Ruby. Naturally after the pilot dream faded I really wanted to make this hobby of mine into something more and to make it into a career. Although I knew basic coding and could build rudimentary programs and websites I quickly realised if I wanted to make it into a profession I would need proper training in not just writing code but becoming a developer. &lt;/p&gt;
-
-&lt;h3 class=&quot;section-heading&quot;&gt;Why Makers&lt;/h3&gt;
-&lt;img src=&quot;/img/post-in-01-2.jpg&quot; alt=&quot;Makers logo&quot; /&gt;
-&lt;p&gt;While researching extensively into training programs and postgraduate degree options. I quickly came to the conclusion that although a masters in computer science would give me an extra qualification and some great theory knowledge, it wouldn&#39;t give me the skills necessary to acquire a junior developer position. &lt;/p&gt;
-
-&lt;p&gt;This is when I first became aware of &lt;a href=&quot;http://www.makersacademy.com&quot;&gt;Makers Academy&lt;/a&gt;. This course said you could become a developer in 12 weeks, this sounded perfect, amazing and  too good to be true. This is when I first discovered the many blogs of the people that attended Makers and also the testimony of their hiring &lt;a href=&quot;http://www.makersacademy.com/partners&quot;&gt; partners&lt;/a&gt;. All of which couldn&#39;t praise the course and its people enough and also talked about how intensive and tough the course was. These blogs also showed that people were obviously getting great training and landing jobs in these great companies (and having a great time in the process). From then on I was convinced and decided to &lt;a href=&quot;http://www.makersacademy.com/apply&quot;&gt;apply&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Chris&lt;/p&gt;
-&lt;/p&gt;
-</description>
-        <pubDate>Fri, 17 Jul 2015 13:00:00 +0100</pubDate>
-        <link>http://chweeks.github.io/2015/07/17/origin/</link>
-        <guid isPermaLink="true">http://chweeks.github.io/2015/07/17/origin/</guid>
         
         
       </item>
