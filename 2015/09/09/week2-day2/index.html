@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My experiences with Makers Academy">
+
+    <title>Battleships 2.0 - chrisharry</title>
+
+    <link rel="canonical" href="http://chweeks.github.io/2015/09/09/week2-day2/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">chrisharry</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/battleship2.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Battleships 2.0</h1>
+                    
+                    <h2 class="subheading">Week 2 Day 2</h2>
+                    
+                    <span class="meta">Posted by chrisharry on September 9, 2015</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h3 class="section-heading">Minimum Viable Product</h3>
+
+<p>After trying and failing in one approach to this project <a href="http://chweeks.github.io/2015/09/08/week2-day1/">yesterday</a> I was determined to try and make things as simple as possible for myself.</p>
+
+<p>Today I was working with Alex, we worked extremely well together and had the same views as to how we should build the game. Unlike yesterday we started by building a very basic system where you can create a boat that holds co-ordinates. You then have a player that can fire at a set of chosen co-ordinates . These co-ordinates are then compared to all the co-ordinates held by the ships and if there's a match they are deleted and the boat is destroyed. This was all built with ships of size 1 and a 4X4 grid. After this was built it was just a case of slowly scaling up from this working start point. We slowly added things such as making sure you couldn't place a ship outside the grid, or on top of one another and also compiling arrays of each players hits and misses, so they can check their shot history..</p>
+
+<p>Ideally we would like to automate the game as much as we can to minimise the user interaction with the code. We want to get it to a point where the user can just boot up the game and then not have to input anything but co-ordinates, when placing a ship and when firing. We were extremely close to finishing this so hopefully we'll be able to get together at some point later in the week and finish it off.</p>
+
+<h3 class="section-heading">Lexoo Lunch Talk</h3>
+
+<p><img src="/img/lexoo.jpg" alt="lexoo" /></p>
+
+<p>Today we had a talk by Chris O’Sullivan the CTO and co-founder of &lt;ahref="https://www.lexoo.co.uk"&gt;Lexoo, a place to get quick quotes from various lawyers online. He spoke about the best ways to ensure you save time and money when trying to create a business code wise. His key points were to write as little code as possible, get someone else to code instead and popping the 'Why?' stack. Writing as little code as possible means saving your time and hence money and also means it is easier to maintain. Getting someone else to write the code is again based on saving your time and therefore money. Why spend time trying to recreate a service that someone else has already made when you can be focussing on your product. Finally popping the 'Why?' stack, when implementing a new feature of your product you should ask yourself/team why you are doing it. If you keep recursively asking why, it should come down to these three reasons:
+<ul><li>Protect revenue</li>
+<li>Increase revenue</li>
+<li>Manage cost</li>
+</ul>
+ If it doesn't do one of these things then it is most likely a non-essential feature and your time and money is best spent elsewhere.
+</p>
+
+<p>Chris</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/09/08/week2-day1/" data-toggle="tooltip" data-placement="top" title="Battleships">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/chweeks">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; chrisharry 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>
