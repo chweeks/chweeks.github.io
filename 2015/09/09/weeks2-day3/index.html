@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="My experiences with Makers Academy">
 
-    <title>Battleships 2.0 - chrisharry</title>
+    <title>Battleships 2.5 - chrisharry</title>
 
-    <link rel="canonical" href="http://chweeks.github.io/2015/09/09/week2-day2/">
+    <link rel="canonical" href="http://chweeks.github.io/2015/09/09/weeks2-day3/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -76,14 +76,14 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/battleship2.jpg')">
+<header class="intro-header" style="background-image: url('/img/lightbulb.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Battleships 2.0</h1>
+                    <h1>Battleships 2.5</h1>
                     
-                    <h2 class="subheading">Week 2 Day 2</h2>
+                    <h2 class="subheading">Week 2 Day 3</h2>
                     
                     <span class="meta">Posted by chrisharry on September 9, 2015</span>
                 </div>
@@ -98,25 +98,133 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<h3 class="section-heading">Minimum Viable Product</h3>
+				<h3 class="section-heading">So Close</h3>
 
-<p>After trying and failing in one approach to this project <a href="http://chweeks.github.io/2015/09/08/week2-day1/">yesterday</a> I was determined to try and make things as simple as possible for myself.</p>
+<p>After the headway I had made yesterday with my battleships program I was slightly worried about today. Most days I have had to change to the other persons code to work on and so start fresh and learn someone else's design. Not today though, luckily Tim was more than happy to change to my code to work on and so I could carry on with the plans I had been making the day before. It was also a great learning process going through line by line and explaining my code. This process led me to do a bit of refactoring to make it more readable and also pointed out a few redundant pieces of code that I could get rid of. By the end of the day, we had built the game and had automated it but there was still one bug that needed to be fixed and we unfortunately just ran out of time... and energy. Hopefully I'll be able to fix this bug and then can spend the rest of the week on getting a nice graphical interface to go with the game.</p>
 
-<p>Today I was working with Alex, we worked extremely well together and had the same views as to how we should build the game. Unlike yesterday we started by building a very basic system where you can create a boat that holds co-ordinates. You then have a player that can fire at a set of chosen co-ordinates . These co-ordinates are then compared to all the co-ordinates held by the ships and if there's a match they are deleted and the boat is destroyed. This was all built with ships of size 1 and a 4X4 grid. After this was built it was just a case of slowly scaling up from this working start point. We slowly added things such as making sure you couldn't place a ship outside the grid, or on top of one another and also compiling arrays of each players hits and misses, so they can check their shot history..</p>
+<h3 class="section-heading">Inheritance and Composition</h3>
 
-<p>Ideally we would like to automate the game as much as we can to minimise the user interaction with the code. We want to get it to a point where the user can just boot up the game and then not have to input anything but co-ordinates, when placing a ship and when firing. We were extremely close to finishing this so hopefully we'll be able to get together at some point later in the week and finish it off.</p>
+<p>Throughout the week we are given research topics to write up and today's was concerning the difference between inheritance and composition.</p>
 
-<h3 class="section-heading">Lexoo Lunch Talk</h3>
+<h2 id="inheritance">Inheritance</h2>
 
-<p><img src="/img/lexoo.jpg" alt="lexoo" /></p>
+<p>The example below shows inheritance from <strong>parent class</strong> <code>Dog</code> to <strong>child class</strong> <code>ShihTzu</code>. The child class <strong>inherits</strong> all the methods of the parent class without having define them. (A like to <code>include</code>ing a <code>module</code> <code>Dog</code>.)</p>
 
-<p>Today we had a talk by Chris O’Sullivan the CTO and co-founder of <a href="https://www.lexoo.co.uk">Lexoo</a>, a place to get quick quotes from various lawyers online. He spoke about the best ways to ensure you save time and money when trying to create a business code wise. His key points were to write as little code as possible, get someone else to code instead and popping the 'Why?' stack. Writing as little code as possible means saving your time and hence money and also means it is easier to maintain. Getting someone else to write the code is again based on saving your time and therefore money. Why spend time trying to recreate a service that someone else has already made when you can be focussing on your product. Finally popping the 'Why?' stack, when implementing a new feature of your product you should ask yourself/team why you are doing it. If you keep recursively asking why, it should come down to these three reasons:
-<ul><li>Protect revenue</li>
-<li>Increase revenue</li>
-<li>Manage cost</li>
-</ul>
- If it doesn't do one of these things then it is most likely a non-essential feature and your time and money is best spent elsewhere.
-</p>
+<pre><code>
+class Dog
+
+  def bark
+    puts "Woof!"
+  end
+
+end
+
+class ShihTzu &lt; Dog
+end
+
+dog = Dog.new
+dog.bark #=&gt; Woof!
+
+little_dog = ShihTzu.new
+little_dog.bark #=&gt; Woof!
+
+</code></pre>
+
+<p>In this example we've explicitly defined our own instance of method <code>bark</code> in the child class, and this is called in preference to the inherited one (from the parent class).</p>
+
+<pre><code>
+class Dog
+
+  def bark
+    puts "Woof!"
+  end
+
+end
+
+class ShihTzu &lt; Dog
+
+  def bark
+    puts "(Annoying) Yap!"
+  end
+
+end
+
+dog = Dog.new
+dog.bark #=&gt; Woof!
+
+little_dog = ShihTzu.new
+little_dog.bark #=&gt; (Annoying) Yap!
+
+</code></pre>
+
+<p>Note that within the overriding method in the child class, you can call <code>super</code> to call the method in the parent class, as if <code>yield</code>ing to it (you return back and carry on in the child method)</p>
+
+<pre><code>
+class Dog
+
+  def bark
+    puts "Woof!"
+  end
+
+end
+
+class ShihTzu &lt; Dog
+
+  def bark
+    puts "This dog goes..."
+    super
+  end
+
+end
+
+dog = Dog.new
+dog.bark #=&gt; Woof!
+
+little_dog = ShihTzu.new
+little_dog.bark #=&gt; This dog goes...
+                #=&gt;  Woof!
+
+</code></pre>
+
+<h2 id="composition">Composition</h2>
+
+<p>The below illustrates the concept of composition, where class <code>ShihTzu</code> contains an instance of class <code>Dog</code> and uses one of its methods (<code>bark</code>).</p>
+
+<pre><code>
+class Dog
+
+  def bark
+    puts "Woof!"
+  end
+
+end
+
+class ShihTzu
+
+  def initialize
+    @dog = Dog.new
+  end
+
+  def bark
+    @dog.bark
+  end
+
+end
+
+dog = Dog.new
+dog.bark #=&gt; Woof!
+
+little_dog = ShihTzu.new
+little_dog.bark #=&gt; Woof!
+</code></pre>
+
+<h2 id="composition-vs-inheritance">Composition vs Inheritance</h2>
+
+<p><strong>Why would we prefer composition over inheritance?</strong></p>
+
+<p>It’s very subjective! But, in general you would use inheritance where you want all of the methods from a class, and composition where you might only want to take some elements.</p>
+
+<p>For example, we’d probably want our <code>ShihTzu</code> class to <strong>inherit</strong> <code>Dog</code> but only <strong>have an instance of</strong> class <code>Animal</code>, which includes functionality that all animals might have. All animals are <strong>composed with</strong> an instance of <code>Animal</code> class inside them, but only dogs will <strong>inherit</strong> behaviour from class <code>Dog</code>.</p>
 
 <p>Chris</p>
 
@@ -126,13 +234,9 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2015/09/08/week2-day1/" data-toggle="tooltip" data-placement="top" title="Battleships">&larr; Previous Post</a>
+                        <a href="/2015/09/09/week2-day2/" data-toggle="tooltip" data-placement="top" title="Battleships 2.0">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2015/09/09/weeks2-day3/" data-toggle="tooltip" data-placement="top" title="Battleships 2.5">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 

@@ -5,9 +5,148 @@
     <description>My experiences with Makers Academy</description>
     <link>http://chweeks.github.io/</link>
     <atom:link href="http://chweeks.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 09 Sep 2015 01:01:35 +0100</pubDate>
-    <lastBuildDate>Wed, 09 Sep 2015 01:01:35 +0100</lastBuildDate>
+    <pubDate>Thu, 10 Sep 2015 00:07:48 +0100</pubDate>
+    <lastBuildDate>Thu, 10 Sep 2015 00:07:48 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Battleships 2.5</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;So Close&lt;/h3&gt;
+
+&lt;p&gt;After the headway I had made yesterday with my battleships program I was slightly worried about today. Most days I have had to change to the other persons code to work on and so start fresh and learn someone else&#39;s design. Not today though, luckily Tim was more than happy to change to my code to work on and so I could carry on with the plans I had been making the day before. It was also a great learning process going through line by line and explaining my code. This process led me to do a bit of refactoring to make it more readable and also pointed out a few redundant pieces of code that I could get rid of. By the end of the day, we had built the game and had automated it but there was still one bug that needed to be fixed and we unfortunately just ran out of time... and energy. Hopefully I&#39;ll be able to fix this bug and then can spend the rest of the week on getting a nice graphical interface to go with the game.&lt;/p&gt;
+
+&lt;h3 class=&quot;section-heading&quot;&gt;Inheritance and Composition&lt;/h3&gt;
+
+&lt;p&gt;Throughout the week we are given research topics to write up and today&#39;s was concerning the difference between inheritance and composition.&lt;/p&gt;
+
+&lt;h2 id=&quot;inheritance&quot;&gt;Inheritance&lt;/h2&gt;
+
+&lt;p&gt;The example below shows inheritance from &lt;strong&gt;parent class&lt;/strong&gt; &lt;code&gt;Dog&lt;/code&gt; to &lt;strong&gt;child class&lt;/strong&gt; &lt;code&gt;ShihTzu&lt;/code&gt;. The child class &lt;strong&gt;inherits&lt;/strong&gt; all the methods of the parent class without having define them. (A like to &lt;code&gt;include&lt;/code&gt;ing a &lt;code&gt;module&lt;/code&gt; &lt;code&gt;Dog&lt;/code&gt;.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+class Dog
+
+  def bark
+    puts &quot;Woof!&quot;
+  end
+
+end
+
+class ShihTzu &amp;lt; Dog
+end
+
+dog = Dog.new
+dog.bark #=&amp;gt; Woof!
+
+little_dog = ShihTzu.new
+little_dog.bark #=&amp;gt; Woof!
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this example we&#39;ve explicitly defined our own instance of method &lt;code&gt;bark&lt;/code&gt; in the child class, and this is called in preference to the inherited one (from the parent class).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+class Dog
+
+  def bark
+    puts &quot;Woof!&quot;
+  end
+
+end
+
+class ShihTzu &amp;lt; Dog
+
+  def bark
+    puts &quot;(Annoying) Yap!&quot;
+  end
+
+end
+
+dog = Dog.new
+dog.bark #=&amp;gt; Woof!
+
+little_dog = ShihTzu.new
+little_dog.bark #=&amp;gt; (Annoying) Yap!
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that within the overriding method in the child class, you can call &lt;code&gt;super&lt;/code&gt; to call the method in the parent class, as if &lt;code&gt;yield&lt;/code&gt;ing to it (you return back and carry on in the child method)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+class Dog
+
+  def bark
+    puts &quot;Woof!&quot;
+  end
+
+end
+
+class ShihTzu &amp;lt; Dog
+
+  def bark
+    puts &quot;This dog goes...&quot;
+    super
+  end
+
+end
+
+dog = Dog.new
+dog.bark #=&amp;gt; Woof!
+
+little_dog = ShihTzu.new
+little_dog.bark #=&amp;gt; This dog goes...
+                #=&amp;gt;  Woof!
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;composition&quot;&gt;Composition&lt;/h2&gt;
+
+&lt;p&gt;The below illustrates the concept of composition, where class &lt;code&gt;ShihTzu&lt;/code&gt; contains an instance of class &lt;code&gt;Dog&lt;/code&gt; and uses one of its methods (&lt;code&gt;bark&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+class Dog
+
+  def bark
+    puts &quot;Woof!&quot;
+  end
+
+end
+
+class ShihTzu
+
+  def initialize
+    @dog = Dog.new
+  end
+
+  def bark
+    @dog.bark
+  end
+
+end
+
+dog = Dog.new
+dog.bark #=&amp;gt; Woof!
+
+little_dog = ShihTzu.new
+little_dog.bark #=&amp;gt; Woof!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;composition-vs-inheritance&quot;&gt;Composition vs Inheritance&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Why would we prefer composition over inheritance?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s very subjective! But, in general you would use inheritance where you want all of the methods from a class, and composition where you might only want to take some elements.&lt;/p&gt;
+
+&lt;p&gt;For example, we’d probably want our &lt;code&gt;ShihTzu&lt;/code&gt; class to &lt;strong&gt;inherit&lt;/strong&gt; &lt;code&gt;Dog&lt;/code&gt; but only &lt;strong&gt;have an instance of&lt;/strong&gt; class &lt;code&gt;Animal&lt;/code&gt;, which includes functionality that all animals might have. All animals are &lt;strong&gt;composed with&lt;/strong&gt; an instance of &lt;code&gt;Animal&lt;/code&gt; class inside them, but only dogs will &lt;strong&gt;inherit&lt;/strong&gt; behaviour from class &lt;code&gt;Dog&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Sep 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/09/09/weeks2-day3/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/09/09/weeks2-day3/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Battleships 2.0</title>
@@ -23,7 +162,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/img/lexoo.jpg&quot; alt=&quot;lexoo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Today we had a talk by Chris O’Sullivan the CTO and co-founder of &amp;lt;ahref=&quot;https://www.lexoo.co.uk&quot;&amp;gt;Lexoo, a place to get quick quotes from various lawyers online. He spoke about the best ways to ensure you save time and money when trying to create a business code wise. His key points were to write as little code as possible, get someone else to code instead and popping the &#39;Why?&#39; stack. Writing as little code as possible means saving your time and hence money and also means it is easier to maintain. Getting someone else to write the code is again based on saving your time and therefore money. Why spend time trying to recreate a service that someone else has already made when you can be focussing on your product. Finally popping the &#39;Why?&#39; stack, when implementing a new feature of your product you should ask yourself/team why you are doing it. If you keep recursively asking why, it should come down to these three reasons:
+&lt;p&gt;Today we had a talk by Chris O’Sullivan the CTO and co-founder of &lt;a href=&quot;https://www.lexoo.co.uk&quot;&gt;Lexoo&lt;/a&gt;, a place to get quick quotes from various lawyers online. He spoke about the best ways to ensure you save time and money when trying to create a business code wise. His key points were to write as little code as possible, get someone else to code instead and popping the &#39;Why?&#39; stack. Writing as little code as possible means saving your time and hence money and also means it is easier to maintain. Getting someone else to write the code is again based on saving your time and therefore money. Why spend time trying to recreate a service that someone else has already made when you can be focussing on your product. Finally popping the &#39;Why?&#39; stack, when implementing a new feature of your product you should ask yourself/team why you are doing it. If you keep recursively asking why, it should come down to these three reasons:
 &lt;ul&gt;&lt;li&gt;Protect revenue&lt;/li&gt;
 &lt;li&gt;Increase revenue&lt;/li&gt;
 &lt;li&gt;Manage cost&lt;/li&gt;
@@ -249,39 +388,6 @@ This is also known as the Red-Green-Refactor cycle, red referring to the failed 
         <pubDate>Sun, 23 Aug 2015 13:00:00 +0100</pubDate>
         <link>http://chweeks.github.io/2015/08/23/precourse-week3/</link>
         <guid isPermaLink="true">http://chweeks.github.io/2015/08/23/precourse-week3/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Pre-Course Week 2</title>
-        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Round Up&lt;/h3&gt;
-
-&lt;p&gt;Second week into the Pre-Course and things are running smoothly. After the pains I went through setting up all the software (on windows) last week, this week has been a breeze. Having completed the Git / Github work for week 2 already, I moved on to finishing off Chris Pine&#39;s Learn to Program. I&#39;ve completed up till chapter 12 and so only two more to go! With the exception of chapter 10, on recursion, things haven&#39;t been too confusing. Recursion was a rather strange concept to wrap my head around at first, but after completing the exercises and playing around you just learn by seeing what does and doesn&#39;t work.&lt;/p&gt;
-
-&lt;p&gt;Recursion is a technique where you create a method that calls itself. I&#39;ll try explain through an example I definitely didn&#39;t steal off &lt;a href=&quot;&quot; src=&quot;http://stackoverflow.com/questions/717725/understanding-recursion&quot;&gt;stackoverflow:&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;How do you empty a vase containing N flowers?&lt;/p&gt;
-
-&lt;p&gt;Answer: if the vase is not empty, you take out one flower and then you empty a vase containing N-1 flowers.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/recursioncode.jpg&quot; alt=&quot;code&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This code checks first if the number of flowers in a vase is greater than 0. If that is false then the program will simply return &#39;The vase is empty&#39; But if it is true it&#39;ll call the method &#39;empty&#39; on the (numberFlowersInVase - 1). This will keep going and going until the vase is empty.&lt;/p&gt;
-
-&lt;p&gt;I know your asking the same thing I did, &quot;Why can&#39;t you just use a loop?&quot; and to be honest you could, but this is a lot more &#39;elegant&#39;. Now I don&#39;t know about elegant but it is a lot tidier... and cooler.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/recursion.jpg&quot; alt=&quot;comic3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;On Friday, week 2&#39;s challenge was released, the Octocat challenge. This involved the basic uses of &lt;a href=&quot;&quot; src=&quot;https://github.com/chweeks/git-commands&quot;&gt;Git and Github commands&lt;/a&gt; and involved the creation of a repository containing files which themselves contained questions. The task was to then create a separate branch of this repository which would be made up of the same files, but instead of the files containing questions they would contain the answers. Essentially creating two versions of the files, one with questions, one with answers. We also had to fork a provided repository, add our adaptations to it and then create a pull request. This is just editing a file on someone else&#39;s repository and then submitting your changes for them to review. All very easy but absolutely essential things to know and understand.&lt;/p&gt;
-
-&lt;p&gt;Only 2 weeks to go now until the real work begins and I can&#39;t wait.&lt;/p&gt;
-
-&lt;p&gt;Chris&lt;/p&gt;
-</description>
-        <pubDate>Sun, 16 Aug 2015 13:00:00 +0100</pubDate>
-        <link>http://chweeks.github.io/2015/08/16/precourse-week2/</link>
-        <guid isPermaLink="true">http://chweeks.github.io/2015/08/16/precourse-week2/</guid>
         
         
       </item>
