@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="My experiences with Makers Academy">
 
-    <title>Battleships 2.0 - chrisharry</title>
+    <title>Battleships 3.0 - chrisharry</title>
 
-    <link rel="canonical" href="http://chweeks.github.io/2015/09/09/week2-day2/">
+    <link rel="canonical" href="http://chweeks.github.io/2015/09/10/weeks2-day4/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -76,16 +76,16 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/battleship2.jpg')">
+<header class="intro-header" style="background-image: url('/img/alabama.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Battleships 2.0</h1>
+                    <h1>Battleships 3.0</h1>
                     
-                    <h2 class="subheading">Week 2 Day 2</h2>
+                    <h2 class="subheading">Week 2 Day 4</h2>
                     
-                    <span class="meta">Posted by chrisharry on September 9, 2015</span>
+                    <span class="meta">Posted by chrisharry on September 10, 2015</span>
                 </div>
             </div>
         </div>
@@ -98,25 +98,52 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<h3 class="section-heading">Minimum Viable Product</h3>
+				<h3 class="section-heading">Finished</h3>
 
-<p>After trying and failing in one approach to this project <a href="http://chweeks.github.io/2015/09/08/week2-day1/">yesterday</a> I was determined to try and make things as simple as possible for myself.</p>
+<p>Finished isn't really the best word to describe my battleships program but all the features are there. All the mechanics to play the game are there and they are all wrapped up in a nice automated method so you don't have to type <code>player_1.fire(player_2, [0,0])</code> every time its your turn to fire. What's left to do is a hell of a lot of refactoring. People talk about code smells and although I know I'm quite strict about these things, I'm sure my code still stinks. although other than a few alterations to make the code more readable I'de say it is a success.</p>
 
-<p>Today I was working with Alex, we worked extremely well together and had the same views as to how we should build the game. Unlike yesterday we started by building a very basic system where you can create a boat that holds co-ordinates. You then have a player that can fire at a set of chosen co-ordinates . These co-ordinates are then compared to all the co-ordinates held by the ships and if there's a match they are deleted and the boat is destroyed. This was all built with ships of size 1 and a 4X4 grid. After this was built it was just a case of slowly scaling up from this working start point. We slowly added things such as making sure you couldn't place a ship outside the grid, or on top of one another and also compiling arrays of each players hits and misses, so they can check their shot history..</p>
+<p>I would have done some more refactoring today but I only actually finished of my game over an hour during lunch. For the majority of the day I was actually working on my partner, Lucy's code. Last week I would've been really frustrated at not being able to work on my own code but now, I think in terms of learning, there is nothing better than reading through someone else's work and figuring out how its components work and it all fits together.</p>
 
-<p>Ideally we would like to automate the game as much as we can to minimise the user interaction with the code. We want to get it to a point where the user can just boot up the game and then not have to input anything but co-ordinates, when placing a ship and when firing. We were extremely close to finishing this so hopefully we'll be able to get together at some point later in the week and finish it off.</p>
+<h3 class="section-heading">Duck Typing</h3>
 
-<h3 class="section-heading">Lexoo Lunch Talk</h3>
+<p>Today's research task was to investigate the concept of Duck Typing. A programming language can be classified as 'strongly typed' or 'weakly typed'. These are a kind of wishy washy terms but a strongly typed language is more likely to give you an error message if an argument given to a function does not match the expected type (integer, boolean...). The idea is that in Ruby which we're using, a 'weakly typed' language you don't need a type in order to invoke an existing method on an object - if a method is defined on it, you can invoke it. eg: </p>
 
-<p><img src="/img/lexoo.jpg" alt="lexoo" /></p>
+<pre><code>
+class Duck
+  def walk
+    'waddle'
+  end
 
-<p>Today we had a talk by Chris O’Sullivan the CTO and co-founder of <a href="https://www.lexoo.co.uk">Lexoo</a>, a place to get quick quotes from various lawyers online. He spoke about the best ways to ensure you save time and money when trying to create a business code wise. His key points were to write as little code as possible, get someone else to code instead and popping the 'Why?' stack. Writing as little code as possible means saving your time and hence money and also means it is easier to maintain. Getting someone else to write the code is again based on saving your time and therefore money. Why spend time trying to recreate a service that someone else has already made when you can be focussing on your product. Finally popping the 'Why?' stack, when implementing a new feature of your product you should ask yourself/team why you are doing it. If you keep recursively asking why, it should come down to these three reasons:
-<ul><li>Protect revenue</li>
-<li>Increase revenue</li>
-<li>Manage cost</li>
-</ul>
- If it doesn't do one of these things then it is most likely a non-essential feature and your time and money is best spent elsewhere.
-</p>
+  def quack
+    'quack'
+  end
+end
+
+class Person
+  def walk
+    'I'm waddling'
+  end
+
+  def quack
+    'I'm quacking'
+  end
+end
+
+def outdoors(thing)
+  thing.walk
+  thing.quack
+end
+
+duck = Duck.new
+person = Person.new
+
+outdoors(duck)
+outdoors(person)
+</code></pre>
+
+<p>
+In duck typing, an object's suitability to be passed as an argument is determined by the presence of certain methods (quack, walk) and properties (with appropriate meaning), rather than the actual type of the object.
+The name comes from the phrase "When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck".</p>
 
 <p>Chris</p>
 
@@ -126,13 +153,9 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2015/09/08/week2-day1/" data-toggle="tooltip" data-placement="top" title="Battleships">&larr; Previous Post</a>
+                        <a href="/2015/09/09/weeks2-day3/" data-toggle="tooltip" data-placement="top" title="Battleships 2.5">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2015/09/09/weeks2-day3/" data-toggle="tooltip" data-placement="top" title="Battleships 2.5">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
