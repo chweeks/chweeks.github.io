@@ -5,8 +5,8 @@
     <description>My experiences with Makers Academy</description>
     <link>http://chweeks.github.io/</link>
     <atom:link href="http://chweeks.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 14 Sep 2015 03:50:31 +0100</pubDate>
-    <lastBuildDate>Mon, 14 Sep 2015 03:50:31 +0100</lastBuildDate>
+    <pubDate>Mon, 14 Sep 2015 03:56:31 +0100</pubDate>
+    <lastBuildDate>Mon, 14 Sep 2015 03:56:31 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -85,6 +85,8 @@ proc_test
 
 A return within a lambda triggers the code immediately outside the lambda block (&lt;code&gt;&#39;hello lambda&#39;&lt;/code&gt;) therefore giving us the statement printed out. In contrast the return within the Proc triggers the code outside of the method where the Proc is being called and so nothing is printed to the screen.
 &lt;/p&gt;
+
+&lt;p&gt;What makes Procs and Lambdas different from methods is that they do not begin a new closure scope and therefore you can access variables defined outside the scope of your Lambda or Proc which you can&#39;t with methods. Also unlike methods, Procs and Lambdas can also be assigned to variables.&lt;/p&gt;
 
 &lt;p&gt;Chris&lt;/p&gt;
 </description>

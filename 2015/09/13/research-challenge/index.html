@@ -173,6 +173,8 @@ proc_test
 A return within a lambda triggers the code immediately outside the lambda block (<code>'hello lambda'</code>) therefore giving us the statement printed out. In contrast the return within the Proc triggers the code outside of the method where the Proc is being called and so nothing is printed to the screen.
 </p>
 
+<p>What makes Procs and Lambdas different from methods is that they do not begin a new closure scope and therefore you can access variables defined outside the scope of your Lambda or Proc which you can't with methods. Also unlike methods, Procs and Lambdas can also be assigned to variables.</p>
+
 <p>Chris</p>
 
 
