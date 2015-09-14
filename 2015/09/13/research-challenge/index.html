@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="My experiences with Makers Academy">
 
-    <title>chrisharry</title>
+    <title>Blocks, Procs, and Lambdas - chrisharry</title>
 
-    <link rel="canonical" href="http://chweeks.github.io/">
+    <link rel="canonical" href="http://chweeks.github.io/2015/09/13/research-challenge/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,112 +75,122 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/ruby.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>chrisharry</h1>
-                    <hr class="small">
-                    <span class="subheading">My experiences with Makers Academy</span>
+                <div class="post-heading">
+                    <h1>Blocks, Procs, and Lambdas</h1>
+                    
+                    <h2 class="subheading">Week 2 Research</h2>
+                    
+                    <span class="meta">Posted by chrisharry on September 13, 2015</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<div class="post-preview">
-    <a href="/2015/09/13/research-challenge/">
-        <h2 class="post-title">            Blocks, Procs, and Lambdas
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Week 2 Research
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 13, 2015</p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2015/09/10/weeks2-day4/">
-        <h2 class="post-title">            Battleships 3.0
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Week 2 Day 4
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 10, 2015</p>
-</div>
-<hr>
+				<p><strong><em>What are blocks, procs and lambdas? Provide code examples to show the differences between each of them. What makes procs and lambdas different to methods?</em></strong></p>
 
-<div class="post-preview">
-    <a href="/2015/09/09/weeks2-day3/">
-        <h2 class="post-title">            Battleships 2.5
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Week 2 Day 3
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 9, 2015</p>
-</div>
-<hr>
+<h3 class="section-heading">Blocks</h3>
 
-<div class="post-preview">
-    <a href="/2015/09/08/week2-day2/">
-        <h2 class="post-title">            Battleships 2.0
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Week 2 Day 2
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 8, 2015</p>
-</div>
-<hr>
+<p>A block is a set of statements within a pair of curly braces <code>{...}</code> or a <code>do ... end</code>. Blocks are pieces of code attached to method calls and can only be used immediately after a method call. eg:
+<pre><code>array = [1,2,3,4,5]
+array.map { |element| element * 2 }
+# =&gt; [2,4,6,8,10]
+</code></pre></p>
+<h3 class="section-heading">Proc</h3>
+<p>The big difference between a block and a Proc is that a Proc is an abject whereas a block isn't. It is an instance of the Proc class and since it is an object it can have methods called on it and can be assigned to a variable.
+<pre><code>array = [1,2,3,4,5]
+p = Proc.new { |element| element * 2 }
+array.map(&amp;p)
+# =&gt; [2,4,6,8,10]
 
-<div class="post-preview">
-    <a href="/2015/09/07/week2-day1/">
-        <h2 class="post-title">            Battleships
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Week 2 Day 1
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on September 7, 2015</p>
-</div>
-<hr>
+proc = Proc.new{puts 'Hello'}
+proc.call
+# =&gt; 'Hello'
+</code></pre></p>
+
+<p>The proc can be called using the (<code>&amp;p</code>) as shown above, by using <code>proc.call</code> or <code>proc.yield</code>.</p>
+
+<h3 class="section-heading">Lambda</h3>
+
+<p>
+<pre><code>array = [1,2,3,4,5]
+lam = lambda { |element| element * 10}
+array.map(&amp;lam)
+# =&gt; [10,20,30,40,50]
+
+lamb = lamda { puts 'Hello' }
+lamb.call
+# =&gt; 'Hello'
+</code></pre>
+
+A lambda is also a member of the Proc class and as you can see above they are very similiar but they do have slight differences. When a Proc recieves less arguments than expected it'll assign nil to the missing arguments whereas a Lambda will not run and throw an error.
+
+<pre><code>proc = Proc.new { |a, b| "#{a += 1}, #{b += 1}" }
+
+proc.call 1
+# =&gt; "NoMethodError: undefined method '+' for nil:NilClass"
+
+lam = lambda { |a, b| "#{a += 1}, #{b += 1}" }
+
+lam.call 1
+ArgumentError: wrong number of arguments (1 for 2)</code></pre>
+
+Although both the above methods failed you can see that they failed for different reasons which shows the difference between how the execute.</p>
+
+<p>Another difference is how Procs and Lambdas treat <code>return</code> thats rub within a method.
+
+<pre><code>def lambda_return
+  lam = lambda { return }
+  lam.call
+  puts 'Hello lambda'
+end
+
+lambda_test                 
+# =&gt;  'Hello lambda'
 
 
-<!-- Pager -->
+def proc_return
+  proc = Proc.new { return }
+  proc.call
+  puts 'Hello proc'
+end
 
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
+proc_test
+# =&gt;
+</code></pre>
+
+A return within a lambda triggers the code immediately outside the lambda block (<code>'hello lambda'</code>) therefore giving us the statement printed out. In contrast the return within the Proc triggers the code outside of the method where the Proc is being called and so nothing is printed to the screen.
+</p>
+
+<p>Chris</p>
 
 
-		</div>
-	</div>
-</div>
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/09/10/weeks2-day4/" data-toggle="tooltip" data-placement="top" title="Battleships 3.0">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 
