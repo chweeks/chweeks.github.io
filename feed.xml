@@ -5,9 +5,41 @@
     <description>My experiences with Makers Academy</description>
     <link>http://chweeks.github.io/</link>
     <atom:link href="http://chweeks.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 14 Sep 2015 03:56:31 +0100</pubDate>
-    <lastBuildDate>Mon, 14 Sep 2015 03:56:31 +0100</lastBuildDate>
+    <pubDate>Mon, 14 Sep 2015 23:13:57 +0100</pubDate>
+    <lastBuildDate>Mon, 14 Sep 2015 23:13:57 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>What Weekend</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Weekend Challenge&lt;/h3&gt;
+
+&lt;p&gt;After an extremely busy week of working through the Battleship project I was looking forward to a relatively relaxed weekend, with a small little challenge thrown in. I was wrong, so very wrong. I woke on Saturday after a party at Makers, bad idea, and felt a little worse for wear. Nonetheless I decided to have a look at my emails and found that we actually had two challenges to complete this weekend. The first of which was to re-write the Ruby Array method inject, which I&#39;ve included below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Array
+  def new_inject(result = nil)
+    copy = self.dup
+    result ||= copy[0]
+    copy.each do |element|
+      result =  yield(result, element)
+    end
+    result
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 class=&quot;section-heading&quot;&gt;Takeaway Challenge&lt;/h3&gt;
+
+&lt;p&gt;The second challenge, as well as two blog write ups, was to create a Takeaway service. This takeaway service would allow you to show a menu, place an order on some accumulation of the dishes on the menu. You can then place the order which checks your payment is the correct amount and prints your order to the screen as well as the total. If your payment is correct, the program will text you telling you your meal will be delivered within the next 45 minutes. This in theory was a relatively easy challenge but the text feature made it quite challenging. We would be using a gem &lt;a href=&quot;&quot; src=&quot;https://github.com/twilio/twilio-ruby&quot;&gt;Twilio&lt;/a&gt; which allows you to send a text within your program to a number. Implementing the feature was challenging but it was testing it that caused the real problems. I spent far too long on sunday night to get this done and ended up getting around 1 and 1/2 hours sleep, but finished the challenge so worth it. Kind of.&lt;/p&gt;
+
+&lt;p&gt;Apart from this insane weekend the week went really well, I can&#39;t quite believe the amount of stuff we&#39;ve all learnt in the two weeks of being here. From what I&#39;ve heard from the seniors next week we&#39;ll be working on Sinatra, a web app framework, which will allow us to quickly create web apps with Ruby. Looking forward to bringing some of our code to life and not just running through the command line.&lt;/p&gt;
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Mon, 14 Sep 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/09/14/week2-review/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/09/14/week2-review/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Blocks, Procs, and Lambdas</title>
@@ -461,31 +493,6 @@ This is also known as the Red-Green-Refactor cycle, red referring to the failed 
         <pubDate>Wed, 02 Sep 2015 13:00:00 +0100</pubDate>
         <link>http://chweeks.github.io/2015/09/02/day2/</link>
         <guid isPermaLink="true">http://chweeks.github.io/2015/09/02/day2/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>First Day</title>
-        <description>&lt;h3 class=&quot;section-heading&quot;&gt;The Name Game&lt;/h3&gt;
-
-&lt;p&gt;The first day at Maker&#39;s was absolutely not what I expected and at the same time was the perfect start. First thing to mention is that absolutely no code was written on the first day. The day was all about getting to know the others in your cohort and an explanation of the structure of each day/week.&lt;/p&gt;
-
-&lt;p&gt;There was no time for being shy as we were instantly told to pair up with someone. In 5 minutes we would then, as a pair, introduce each other to the rest of the group. I paired up with Yana, who used to be a tax Lawyer back in Russia but has come here so she can do something she actually enjoys instead. We then played the name game where, standing in a circle, we have to name everyone in the circle and where they&#39;re from. This surprisingly worked and I can now name all the 30 odd people in my cohort.&lt;/p&gt;
-
-&lt;p&gt;We were then split into small groups and were given 15 minutes to build a spaghetti tower. The aim was to build the tower as high as we could with the materials we were given and place a marshmallow at the top of the tower. It&#39;s safe to say my group did not win this challenge despite having an engineer in the group. I&#39;m glad I didn&#39;t take a picture of it as it was possibly the ugliest thing ever constructed. Nonetheless it was fun building this monstrosity and we all had a good laugh.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/spaghetti-challenge.jpg&quot; alt=&quot;spaghetti-challenge&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We were then given a small talk on the significance of this challenge and which teams do better and why. Rather than try explain it myself, &lt;a href=&quot;https://www.youtube.com/watch?v=H0_yKBitO8M&quot;&gt;here is a TED talk &lt;/a&gt; that does it a lot better.&lt;/p&gt;
-
-&lt;p&gt;A lot more stuff was said and done but their was so much of it that the only other thing I remember after this was the pub. I only stayed for a drink or two (on Makers) but still only managed to get home at 10pm. The northern line was down and so ended up walking and getting two buses home. Yay public transport. &lt;/p&gt;
-
-&lt;p&gt;Chris&lt;/p&gt;
-</description>
-        <pubDate>Tue, 01 Sep 2015 13:00:00 +0100</pubDate>
-        <link>http://chweeks.github.io/2015/09/01/First%20Day/</link>
-        <guid isPermaLink="true">http://chweeks.github.io/2015/09/01/First%20Day/</guid>
         
         
       </item>
