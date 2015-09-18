@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="My experiences with Makers Academy">
 
-    <title>Airport Challenge - chrisharry</title>
+    <title>Sinatra - chrisharry</title>
 
-    <link rel="canonical" href="http://chweeks.github.io/2015/09/06/weekend-challenge-1/">
+    <link rel="canonical" href="http://chweeks.github.io/2015/09/18/week3-review/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -76,16 +76,16 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/plane.jpg')">
+<header class="intro-header" style="background-image: url('/img/macs.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Airport Challenge</h1>
+                    <h1>Sinatra</h1>
                     
-                    <h2 class="subheading">Weekend 1</h2>
+                    <h2 class="subheading">Week 3 Review</h2>
                     
-                    <span class="meta">Posted by chrisharry on September 6, 2015</span>
+                    <span class="meta">Posted by chrisharry on September 18, 2015</span>
                 </div>
             </div>
         </div>
@@ -98,18 +98,36 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<h3 class="section-heading">The Task</h3>
+				<h3 class="section-heading">Web Applications</h3>
 
-<p>Every week we have a weekend challenge meant to test and solidify what we have learnt throughout the week. We were told to ensure that by Monday morning at 9AM we had submitted a pull request with our challenge with even the smallest amount of code if necessary, just something. We were also told about not worrying about completely finishing the Boris-Bikes project before starting the challenge. So naturally I went about completing the Boris-Bikes challenge all Saturday and didn't even look at the challenge till Sunday.</p>
-<p>Our challenge for the weekend was to create a basic simulation of an airport through a set of given user stories. The task had very similar elements to the Boris-Bikes projects. We had two Objects a plane and an airport. A plane needed to have a status, either flying or landed. The airport needed to be able to instruct the plane to land and to instruct it to take off. The planes couldn't land if the airport was full and couldn't land or take off when the weather was stormy.</p>
-<p>The code itself was very simple but as usual it was the tests that made it tricky. Having a random method for the chance of stormy weather made the tests more difficult as we had to learn about stubbing. Essentially when testing to make sure the planes couldn't land or take off in stormy weather I had to 'stub' the random_weather method to ensure that the weather was always stormy for those tests. </p>
-<p>Once submitted the code gets 'marked' and I use marked very loosely as when its submitted some automated tests are run on the code. The main test is that all your written tests pass and also that your tests cover everything within the system. I got a hundred percent coverage which I was really happy with but then there was hound. From what I understand this hound program goes through your code and tests its readability. It throws up errors for lines and methods that are too long or if indentation is wrong. I had one of these errors that I just couldn't seem to shake for the longest time but managed to succeed in the end.</p>
+<p>This week has been my toughest week so far here at makers. Probably due to the lack of sleep over the last couple of days but also being introduced to Sinatra. Our projects for this week was to create a web application using our Battleship ruby code from the week before and transferring it to the web using Sinatra.</p>
 
-<p> My first week at Makers has been an amazing experience, I've had a lot of fun and have learnt more than I thought possible. Their have been some great moments where you seem to understand everything and feel like a god, but their have been even more moments where you come crashing face first back down to earth and realise you have but scratched the surface.</p>
+<p><img src="http://www.kylembrown.com/wp-content/uploads/2013/11/logo.png" alt="sinatra" /></p>
 
-<p><a href="https://xkcd.com/979/"><img src="/img/program-comic.jpg" alt="https://xkcd.com/979/" /></a></p>
+<p>Sinatra is a web application library and domain-specific language written in Ruby. Its main purpose is the quick and easy building of web applications. Although tough to start with once you understand the way your supposed to link your application logic to your controller and views things become a lot easier. In your controller you write your routes, this is a  HTTP method paired with a URL-matching pattern. Each route then has a block of code which can link you to a view (what the user will see) and can also use your application code (Battleships).</p>
+<pre><code>
+get '/home_page' do
+  #show something
+  if @name
+    erb :home_page
+  else
+    erb :ask_name
+  end
+end
 
-<p>1 week down, 11 to go.</p>
+post '/home_page' do
+  #create something
+  @name = params[name]
+  redirect ('/home_page')
+end
+</code></pre>
+<p> The code above shows that when you go to the url <code>'/home_page'</code> it will show you the html based on the home_page.erb file in your view. <code>if @name</code> exists it may show something like 'Hi <code>@name</code>'. If it doesn't exist it will send you to the ask_name page where a form may ask you to input your name. This form can have <code>action: '/home_page'</code> with the <code>method = post</code>  which will then send you to the <code>post 'home_page' do </code> above and save <code>@name</code> to the value you just entered into the form. This will then redirect you to the <code>'/home_page'</code>nwhere the <code>@name</code> now exists and so will show you the <code>:home_page</code> which might say 'Hi Chris'.</p>
+
+<p><img src="http://florianhanke.com/blog/images/sinatra.png" alt="sinatra" /></p>
+
+<p>Learning to link all these parts together was a slow process but by having an actual visual representation of your work in the form of a website made it easier to slog through. By the end of the week I now have a working game, albeit just playing against the computer, but I didn't really see the point in making a two player game of battleship on one screen. The only frustrating thing is the lack of javascript so far, we've gone from 70;s command line based code to now 90's looking websites, so it'l be nice to be able to start using things like JQuery to spice it up.</p>
+
+<p>I believe the weekend challenge will be to create another web application of a small game but I'm not sure yet. Hopefully it won't be anything too substantial like last weekend but I know I'll be spending a lot of time on whatever it is to get it to the standard I want. It'll just be a toss up between pretty code or watching the opening weekend of the Rugby world cup. Pretty sure I know which of those will end up winning.</p>
 
 <p>Chris</p>
 
@@ -119,13 +137,9 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2015/09/04/day4/" data-toggle="tooltip" data-placement="top" title="Doubles">&larr; Previous Post</a>
+                        <a href="/2015/09/14/week2-review/" data-toggle="tooltip" data-placement="top" title="What Weekend">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2015/09/07/week2-day1/" data-toggle="tooltip" data-placement="top" title="Battleships">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
