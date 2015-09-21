@@ -5,9 +5,65 @@
     <description>My experiences with Makers Academy</description>
     <link>http://chweeks.github.io/</link>
     <atom:link href="http://chweeks.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 18 Sep 2015 23:55:53 +0100</pubDate>
-    <lastBuildDate>Fri, 18 Sep 2015 23:55:53 +0100</lastBuildDate>
+    <pubDate>Mon, 21 Sep 2015 22:12:36 +0100</pubDate>
+    <lastBuildDate>Mon, 21 Sep 2015 22:12:36 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Rock, Paper, Scissors</title>
+        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Sinatra Review&lt;/h3&gt;
+
+&lt;p&gt;This weekends challenge was to put everything we had learned from creating a web application from our battleships code and use it to build a Rock, Paper, Scissors game. This was surprisingly easy and quick to do, the TDD approach to building the game would have taken an age a few weeks ago, but now comes together in a flash. The Sinatra side of it then came naturally apart from a few issues testing features that involve randomness. The majority of the time was on the stylesheets and trying to make it look like something modern rather than just a plain html site from the 90&#39;s.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://advisoranalyst.advisoranalystgr.netdna-cdn.com/wp-content/uploads/2014/05/thumb_6917_rockpaperscissors.jpg&quot; alt=&quot;rps&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt; The issue with feature testing something with a random element is that the basis of your test is an expectation. You expect, given a certain set of initial conditions, something to happen. The problem is, when your feature has a random element to it, it may have a condition if random_number = 1 do x else do y. In my challenge I was trying to test that if you won your hand in rock, paper, scissors the site would take you to the winners page. The problem was, the computers&#39; choice is random and so to ensure that I would win, I had to stub the randomness. The way I got around this was by using &lt;code&gt;srand&lt;/code&gt;. By using a predetermined seed such as &lt;code&gt;srand(1)&lt;/code&gt; I can ensure that random values will always evaluate the same, as they will use this seed. eg.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+before do
+  srand(1)
+end
+
+scenario &#39;Goes to winner page when won&#39; do
+  visit &#39;/name&#39;
+  fill_in &#39;name&#39;, with: &#39;Chris&#39;
+  click_button &#39;Start&#39;
+  click_button &#39;scissors&#39;
+  expect(page).to have_content &#39;You Win&#39;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the feature test above I&#39;m using Capybara which mimics navigating the web application. In the above example, I tell the program to log in with name &#39;Chris&#39; and to click the scissors button. Some application logic is then run behind the scenes that generates a &#39;random&#39; computer choice and determines who is the winner. This &#39;randomness&#39; isn&#39;t good enough for me in this test,  as I&#39;m testing whether winning will take me to the &#39;you win&#39; page and so I set the seed before the test to &lt;code&gt;srand(1)&lt;/code&gt;. I played with this seed before hand and it always gives the computer a hand of &#39;Paper&#39;, allowing me to test for a bunch of different scenarios.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+scenario &#39;Goes to loser page when lost&#39; do
+  visit &#39;/name&#39;
+  fill_in &#39;name&#39;, with: &#39;Chris&#39;
+  click_button &#39;Start&#39;
+  click_button &#39;rock&#39;
+  expect(page).to have_content &#39;You Lose&#39;
+end
+
+scenario &#39;Goes to draw page when drawn&#39; do
+  visit &#39;/name&#39;
+  fill_in &#39;name&#39;, with: &#39;Chris&#39;
+  click_button &#39;Start&#39;
+  click_button &#39;paper&#39;
+  expect(page).to have_content &#39;Draw!&#39;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://resources.infosecinstitute.com/wp-content/uploads/121411_1611_SecureRando1.png&quot; alt=&quot;random_numbers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Luckily I found this solution quickly and could get back to the far more important work of watching the opening weekend of the rugby world cup. Go Japan.&lt;/p&gt;
+
+&lt;p&gt;Chris&lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 Sep 2015 13:00:00 +0100</pubDate>
+        <link>http://chweeks.github.io/2015/09/20/week3-challenge/</link>
+        <guid isPermaLink="true">http://chweeks.github.io/2015/09/20/week3-challenge/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Sinatra</title>
@@ -473,29 +529,6 @@ This is to test whether the DockingStation method &#39;dock&#39; adds the bike t
         <pubDate>Fri, 04 Sep 2015 13:00:00 +0100</pubDate>
         <link>http://chweeks.github.io/2015/09/04/day4/</link>
         <guid isPermaLink="true">http://chweeks.github.io/2015/09/04/day4/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Day 3</title>
-        <description>&lt;h3 class=&quot;section-heading&quot;&gt;Do Over&lt;/h3&gt;
-
-&lt;p&gt;This morning we had our standup run, with boundless energy as always, by our coach Tansaku. We discussed what we had struggled with the day before and a large topic of discussion was the containment of error methods within blocks rather than normal parenthesis. We were also given the task of writing a blog post on Red-Green-Refactor and how its linked to Test Driven Development which I&#39;ve already mentioned &lt;a href=&quot;http://chweeks.github.io/2015/09/02/day2/&quot;&gt;here.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 class=&quot;section-heading&quot;&gt;Boris Bikes part-2&lt;/h3&gt;
-
-&lt;p&gt;After the standup we split into our new pairing partners for the day. I was paired with David who was a great guy to work with. It was here that I realised how much Philip and I had done the day before, which I was glad to know as we were working till around 8 last night. On the other hand, the way the pair programming works here means that you always jump down to the code of the person who has done less. This means no one is rushed and has an equal opportunity to work through the projects in their own time. It also gives the chance to the person jumping down to reinforce what they&#39;ve learnt by guiding their pair through the challenges. Although you know in the long run this way of things will help rather than hinder you, it is tough to not get frustrated when you think of how far you could get if you were working on your own.&lt;/p&gt;
-
-&lt;p&gt;By the afternoon we had caught up to my work from the day before and then started to make great strides into the rest of the project. We worked really well together and there were a lot of good &#39;debates&#39; through the day on which way to do things. This made sure we understood and knew why we thought our way was best, which ensured we learnt the most we could from each other.&lt;/p&gt;
-
-&lt;p&gt;After yesterday I really didn&#39;t fancy staying too late and so left pretty early as we made some good progress in the afternoon and very close to finishing the project.&lt;/p&gt;
-
-&lt;p&gt;Chris&lt;/p&gt;
-</description>
-        <pubDate>Thu, 03 Sep 2015 13:00:00 +0100</pubDate>
-        <link>http://chweeks.github.io/2015/09/03/day3/</link>
-        <guid isPermaLink="true">http://chweeks.github.io/2015/09/03/day3/</guid>
         
         
       </item>

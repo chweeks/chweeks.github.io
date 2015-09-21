@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="My experiences with Makers Academy">
 
-    <title>chrisharry</title>
+    <title>Rock, Paper, Scissors - chrisharry</title>
 
-    <link rel="canonical" href="http://chweeks.github.io/page4/">
+    <link rel="canonical" href="http://chweeks.github.io/2015/09/20/week3-challenge/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,112 +75,92 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/dice.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>chrisharry</h1>
-                    <hr class="small">
-                    <span class="subheading">My experiences with Makers Academy</span>
+                <div class="post-heading">
+                    <h1>Rock, Paper, Scissors</h1>
+                    
+                    <h2 class="subheading">Week 3 challenge</h2>
+                    
+                    <span class="meta">Posted by chrisharry on September 20, 2015</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<div class="post-preview">
-    <a href="/2015/08/16/precourse-week2/">
-        <h2 class="post-title">            Pre-Course Week 2
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Moving along nicely
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on August 16, 2015</p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2015/08/09/precourse-week1/">
-        <h2 class="post-title">            Pre-Course Week 1
-        </h2>
-        
-        <h3 class="post-subtitle">
-            All systems are go
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on August 9, 2015</p>
-</div>
-<hr>
+				<h3 class="section-heading">Sinatra Review</h3>
 
-<div class="post-preview">
-    <a href="/2015/08/02/precourse_launch/">
-        <h2 class="post-title">            Pre-course Launch
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Meeting the team
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on August 2, 2015</p>
-</div>
-<hr>
+<p>This weekends challenge was to put everything we had learned from creating a web application from our battleships code and use it to build a Rock, Paper, Scissors game. This was surprisingly easy and quick to do, the TDD approach to building the game would have taken an age a few weeks ago, but now comes together in a flash. The Sinatra side of it then came naturally apart from a few issues testing features that involve randomness. The majority of the time was on the stylesheets and trying to make it look like something modern rather than just a plain html site from the 90's.</p>
 
-<div class="post-preview">
-    <a href="/2015/07/26/application/">
-        <h2 class="post-title">            Application
-        </h2>
-        
-        <h3 class="post-subtitle">
-            It begins.
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on July 26, 2015</p>
-</div>
-<hr>
+<p><img src="http://advisoranalyst.advisoranalystgr.netdna-cdn.com/wp-content/uploads/2014/05/thumb_6917_rockpaperscissors.jpg" alt="rps" /></p>
 
-<div class="post-preview">
-    <a href="/2015/07/17/origin/">
-        <h2 class="post-title">            Everyone loves an origin story
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Also context?
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by chrisharry on July 17, 2015</p>
-</div>
-<hr>
+<p> The issue with feature testing something with a random element is that the basis of your test is an expectation. You expect, given a certain set of initial conditions, something to happen. The problem is, when your feature has a random element to it, it may have a condition if random_number = 1 do x else do y. In my challenge I was trying to test that if you won your hand in rock, paper, scissors the site would take you to the winners page. The problem was, the computers' choice is random and so to ensure that I would win, I had to stub the randomness. The way I got around this was by using <code>srand</code>. By using a predetermined seed such as <code>srand(1)</code> I can ensure that random values will always evaluate the same, as they will use this seed. eg.</p>
+<pre><code>
+before do
+  srand(1)
+end
+
+scenario 'Goes to winner page when won' do
+  visit '/name'
+  fill_in 'name', with: 'Chris'
+  click_button 'Start'
+  click_button 'scissors'
+  expect(page).to have_content 'You Win'
+end
+</code></pre>
+
+<p>In the feature test above I'm using Capybara which mimics navigating the web application. In the above example, I tell the program to log in with name 'Chris' and to click the scissors button. Some application logic is then run behind the scenes that generates a 'random' computer choice and determines who is the winner. This 'randomness' isn't good enough for me in this test,  as I'm testing whether winning will take me to the 'you win' page and so I set the seed before the test to <code>srand(1)</code>. I played with this seed before hand and it always gives the computer a hand of 'Paper', allowing me to test for a bunch of different scenarios.</p>
+
+<pre><code>
+scenario 'Goes to loser page when lost' do
+  visit '/name'
+  fill_in 'name', with: 'Chris'
+  click_button 'Start'
+  click_button 'rock'
+  expect(page).to have_content 'You Lose'
+end
+
+scenario 'Goes to draw page when drawn' do
+  visit '/name'
+  fill_in 'name', with: 'Chris'
+  click_button 'Start'
+  click_button 'paper'
+  expect(page).to have_content 'Draw!'
+end
+</code></pre>
+
+<p><img src="http://resources.infosecinstitute.com/wp-content/uploads/121411_1611_SecureRando1.png" alt="random_numbers" /></p>
+
+<p>Luckily I found this solution quickly and could get back to the far more important work of watching the opening weekend of the rugby world cup. Go Japan.</p>
+
+<p>Chris</p>
 
 
-<!-- Pager -->
+                <hr>
 
-<ul class="pager">
-    
-    <li class="previous">
-        <a href="/page3">&larr; Newer Posts</a>
-    </li>
-    
-    
-</ul>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/09/18/week3-review/" data-toggle="tooltip" data-placement="top" title="Sinatra">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
 
-
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 
